@@ -9,23 +9,22 @@ import {
 
 const items = [
   {
-    src: './images/pic1.jpg',
+    src: './images/qpm1.jpg',
     altText: 'Slide 1',
     caption: 'Slide 1'
   },
   {
-    src: './images/pic2.jpg',
-    altText: 'Slide 2',
+    src: './images/bg2.jpg',
     caption: 'Slide 2'
   },
   {
-    src: './images/pic3.jpg',
+    src: './images/tw1.jpg',
     altText: 'Slide 3',
     caption: 'Slide 3'
   }
 ];
 
-const Slides = (props) => {
+const Example = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -73,4 +72,4 @@ const Slides = (props) => {
   );
 }
 
-export default Slides;
+export default Example;

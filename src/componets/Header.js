@@ -26,7 +26,12 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText
 } from 'reactstrap';
 
 const Header = (props) => {
@@ -35,33 +40,41 @@ const Header = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Navbar color="primary" dark expand="md">
-        <NavbarBrand tag={Link} to="/">Pongpanot.s</NavbarBrand>
+    
+    <div class="p-3 mb-2 bg-dark text-white" style={{ padding: '.5rem' }}>  
+    <float-right><img src="./images/logo QPM.png"/></float-right>
+      <Navbar color="dark" dark expand="md">
+        <NavbarBrand tag={Link} to="/">หน้าหลัก</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
+          <Nav className="mr-auto" navbar>  
+          <NavItem>
+              <NavLink tag={Link} to="/Product">หลักสูตร</NavLink>
+            </NavItem>
             <NavItem>
               <NavLink tag={Link} to="/About/">เกี่ยวกับเรา</NavLink>
             </NavItem>
             <NavItem>
               <NavLink tag={Link} to="/Contact">ติดต่อเรา</NavLink>
             </NavItem>
+            
             <NavItem>
-              <NavLink tag={Link} to="/Product">สินค้า</NavLink>
+              <NavLink tag={Link} to="/Qa">คำถามที่พบบ่อย</NavLink>
             </NavItem>
+          
           </Nav>
         <Nav className="ml-auto" navbar>
-          <NavItem>
-        <NavLink tag={Link} to="/Profile">ข้อมูลส่วนตัว</NavLink>
-            </NavItem>
             <NavItem>
               <NavLink tag={Link}to="/login">เข้าสู่ระบบ</NavLink>
             </NavItem>
             <NavItem>
               <NavLink tag={Link}to="/register">สมัครสมาชิก</NavLink>
             </NavItem>
-        </Nav>
+      
+          
+        
+     
+          </Nav>
         </Collapse>
       </Navbar>
     </div>

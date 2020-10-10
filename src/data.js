@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 export default {
     products : [
         {id: '1001',name:'เสื้อเชิ๊ต',price:200, stock:10,pic:'./images/pic1.jpg'},
